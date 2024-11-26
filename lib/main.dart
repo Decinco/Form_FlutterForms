@@ -1,14 +1,12 @@
-import 'package:example/sources/conditional_fields.dart';
-import 'package:example/sources/dynamic_fields.dart';
-import 'package:example/sources/related_fields.dart';
+import 'package:example/sources/FormA.dart';
+import 'package:example/sources/FormB.dart';
+import 'package:example/sources/FormC.dart';
+import 'package:example/sources/FormD.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 
 import 'code_page.dart';
-import 'sources/complete_form.dart';
-import 'sources/custom_fields.dart';
-import 'sources/signup_form.dart';
 
 void main() => runApp(const MyApp());
 
@@ -37,19 +35,19 @@ class _HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CodePage(
-      title: 'Flutter Form Builder',
+      title: 'Daniel Mugueta',
       child: ListView(
         children: <Widget>[
           ListTile(
-            title: const Text('Complete Form'),
+            title: const Text('Formulari A'),
             trailing: const Icon(Icons.arrow_right_sharp),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
                     return const CodePage(
-                      title: 'Complete Form',
-                      child: CompleteForm(),
+                      title: 'Daniel Mugueta - A',
+                      child: FormA(),
                     );
                   },
                 ),
@@ -58,15 +56,15 @@ class _HomePage extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            title: const Text('Custom Fields'),
+            title: const Text('Formulari B'),
             trailing: const Icon(Icons.arrow_right_sharp),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
                     return const CodePage(
-                      title: 'Custom Fields',
-                      child: CustomFields(),
+                      title: 'Daniel Mugueta - B',
+                      child: FormB(),
                     );
                   },
                 ),
@@ -75,15 +73,15 @@ class _HomePage extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            title: const Text('Signup Form'),
+            title: const Text('Formulari C'),
             trailing: const Icon(Icons.arrow_right_sharp),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
                     return const CodePage(
-                      title: 'Signup Form',
-                      child: SignupForm(),
+                      title: 'Daniel Mugueta - C',
+                      child: FormC(),
                     );
                   },
                 ),
@@ -92,49 +90,15 @@ class _HomePage extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            title: const Text('Dynamic Form'),
+            title: const Text('Formulari D'),
             trailing: const Icon(Icons.arrow_right_sharp),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
                     return const CodePage(
-                      title: 'Dynamic Form',
-                      child: DynamicFields(),
-                    );
-                  },
-                ),
-              );
-            },
-          ),
-          const Divider(),
-          ListTile(
-            title: const Text('Conditional Form'),
-            trailing: const Icon(Icons.arrow_right_sharp),
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const CodePage(
-                      title: 'Conditional Form',
-                      child: ConditionalFields(),
-                    );
-                  },
-                ),
-              );
-            },
-          ),
-          const Divider(),
-          ListTile(
-            title: const Text('Related Fields'),
-            trailing: const Icon(Icons.arrow_right_sharp),
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const CodePage(
-                      title: 'Related Fields',
-                      child: RelatedFields(),
+                      title: 'Daniel Mugueta - D',
+                      child: FormD(),
                     );
                   },
                 ),
