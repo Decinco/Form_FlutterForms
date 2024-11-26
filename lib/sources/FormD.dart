@@ -140,6 +140,10 @@ class _FormDState extends State<FormD> {
                           itemBuilder: (context, String character) {
                             return ListTile(title: Text(character));
                           },
+                          validator: FormBuilderValidators.compose([
+                            FormBuilderValidators.containsElement(characters,
+                                errorText: "Invalid character!")
+                          ]),
                           suggestionsCallback: (query) {
                             if (query.isNotEmpty) {
                               var lowerCase = query.toLowerCase();
